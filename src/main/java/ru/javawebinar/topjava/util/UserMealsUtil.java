@@ -1,19 +1,17 @@
 package ru.javawebinar.topjava.util;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
-import ru.javawebinar.topjava.model.UserMeal;
-import ru.javawebinar.topjava.model.UserMealWithExcess;
-
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import ru.javawebinar.topjava.model.UserMeal;
+import ru.javawebinar.topjava.model.UserMealWithExcess;
 
 public class UserMealsUtil {
 
@@ -35,7 +33,8 @@ public class UserMealsUtil {
 
     System.out.println("---------------------------------------");
 
-    List<UserMealWithExcess> mealsToStream = filteredByStreams(meals, LocalTime.of(7, 0), LocalTime.of(12, 0), 2000);
+    List<UserMealWithExcess> mealsToStream = filteredByStreams(meals, LocalTime.of(7, 0),
+        LocalTime.of(12, 0), 2000);
     mealsToStream.forEach(System.out::println);
   }
 
