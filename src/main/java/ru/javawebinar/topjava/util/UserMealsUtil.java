@@ -40,7 +40,6 @@ public class UserMealsUtil {
 
   public static List<UserMealWithExcess> filteredByCycles(List<UserMeal> meals, LocalTime startTime,
       LocalTime endTime, int caloriesPerDay) {
-    // TODO return filtered list with excess. Implement by cycles
 
     Map<LocalDate, Integer> totalCaloriesPerDay = new HashMap<>();
     for (UserMeal meal : meals) {
@@ -60,13 +59,11 @@ public class UserMealsUtil {
             totalCaloriesPerDay.get(meal.getDateTime().toLocalDate()) > caloriesPerDay));
       }
     }
-
     return result;
   }
 
   public static List<UserMealWithExcess> filteredByStreams(List<UserMeal> meals,
       LocalTime startTime, LocalTime endTime, int caloriesPerDay) {
-    // TODO Implement by streams
 
     Map<LocalDate, Integer> totalCaloriesPerDay = meals.stream()
         .collect(Collectors
