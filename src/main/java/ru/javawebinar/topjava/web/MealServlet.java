@@ -14,6 +14,7 @@ import ru.javawebinar.topjava.model.MealTo;
 import ru.javawebinar.topjava.util.MealsUtil;
 
 public class MealServlet extends HttpServlet {
+
   private static final Logger log = getLogger(UserServlet.class);
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
