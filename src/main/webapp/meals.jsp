@@ -22,12 +22,7 @@
     </thead>
     <tbody>
     <c:forEach items="${MealsTo}" var="meals">
-        <c:if test="${meals.excess == true}">
-            <tr style="color: red">
-        </c:if>
-        <c:if test="${meals.excess == false}">
-            <tr style="color: green">
-        </c:if>
+        <tr style="color: ${meals.excess ? 'red' : 'green'}">
         <td style=" border: 1px solid #dddddd;">
             <fmt:parseDate value="${ meals.dateTime }" pattern="yyyy-MM-dd'T'HH:mm" var="parsedDateTime" type="both"/>
             <fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${ parsedDateTime }"/>
