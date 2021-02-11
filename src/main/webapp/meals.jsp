@@ -21,14 +21,15 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${MealsTo}" var="meals">
+    <c:forEach items="${mealList}" var="meals">
+        <jsp:useBean id="meals" scope="page" type="ru.javawebinar.topjava.model.MealTo" />
         <tr style="color: ${meals.excess ? 'red' : 'green'}">
         <td style=" border: 1px solid #dddddd;">
             <fmt:parseDate value="${ meals.dateTime }" pattern="yyyy-MM-dd'T'HH:mm" var="parsedDateTime" type="both"/>
             <fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${ parsedDateTime }"/>
         </td>
         <td style=" border: 1px solid #dddddd;"><c:out value="${meals.description}"/></td>
-        <td style=" border: 1px solid #dddddd;"><c:out value="${meals.calories}"/></td>
+        <td style=" border: 1px solid #dddddd;">${meals.calories}</td>
         <td style=" border: 1px solid #dddddd;"></td>
         <td style=" border: 1px solid #dddddd;"></td>
         </tr>
