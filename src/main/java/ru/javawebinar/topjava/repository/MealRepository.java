@@ -1,6 +1,6 @@
 package ru.javawebinar.topjava.repository;
 
-import java.util.Collection;
+import java.util.List;
 import ru.javawebinar.topjava.model.Meal;
 
 public interface MealRepository {
@@ -14,5 +14,5 @@ public interface MealRepository {
     Meal get(int id);
 
     // ORDERED dateTime desc
-    Collection<Meal> getAll();
+    List<Meal> getAll();
 }
